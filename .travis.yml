@@ -5,6 +5,14 @@ python:
 install:
   - pip install -r requirements.txt
 
+script:
+  - black ./
+  - flake8 ./
+  - coverage run swe1app/manage.py test
+
+after_success:
+  coveralls
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
