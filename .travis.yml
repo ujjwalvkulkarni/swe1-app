@@ -2,6 +2,9 @@ language: python
 python:
   - "3.8"
 
+install:
+  - pip install -r requirements.txt
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
