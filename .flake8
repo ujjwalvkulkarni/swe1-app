@@ -1,3 +1,4 @@
 [flake8]
 per-file-ignores =
     polls/*:E501
+    swe1app/*:E501
