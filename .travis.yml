@@ -8,7 +8,7 @@ install:
 script:
   - black ./
   - flake8 ./
-  - coverage run swe1app/manage.py test
+  - coverage run manage.py test
 
 after_success:
   coveralls
